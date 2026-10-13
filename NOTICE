@@ -1,0 +1,25 @@
+PBI-Net third-party attribution
+
+Framework: THUML Time-Series-Library, https://github.com/thuml/Time-Series-Library.
+The upstream MIT license and copyright are retained in LICENSE.
+utils/timefeatures.py retains its Amazon copyright and Apache-2.0 header;
+see third_party_licenses/Apache-2.0.txt.
+
+The sequential affine interaction follows CFPT (ICML 2025).
+https://github.com/BUPT-SN/CFPT
+The PBI-Net implementation and paper attribute that formulation to CFPT.
+No CFPT baseline source is redistributed here.
+
+Observation data
+----------------
+We distribute our processed Djougou/Medicina hourly CSVs with IGETS/EOST
+attribution and the CC BY 4.0 license link. The Membach observations are
+obtained directly from ROB using the download and preprocessing instructions.
+See data/DATA_LICENSE.md for provider attribution and data-specific terms.
+
+Included baselines: DLinear, PatchTST, iTransformer, TimesNet, TimeMixer, FreTS.
+We include the baseline model implementations and shared layers used in our experiments.
+See docs/BASELINES.md for upstream attribution. Source notices and applicable
+third-party license terms remain in force. Shared attention utility changes:
+Reformer import moved to its optional constructor; causal mask helper added.
+No active FullAttention calculation or baseline model source was changed.

@@ -1,0 +1,49 @@
+{
+  "generated_at_utc": "2026-08-24T18:50:07.043897+00:00",
+  "project_root": "/home/ai/Time-Series-Library",
+  "data_csv": "/home/ai/Time-Series-Library/dataset/djougou/djougou_gravity_longest.csv",
+  "value_column": "value",
+  "models": [
+    "PBI_Net",
+    "CFPT",
+    "PatchTST",
+    "TimesNet"
+  ],
+  "batch_sizes": [
+    1,
+    32
+  ],
+  "warmup": 50,
+  "repeats_per_trial": 200,
+  "trials": 5,
+  "seed": 20260825,
+  "device": "cuda:0",
+  "python": "3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]",
+  "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
+  "torch": "2.5.1+cu121",
+  "cuda_runtime": "12.1",
+  "cudnn": 90100,
+  "gpu_name": "Tesla V100-PCIE-16GB-LS",
+  "source_sha256": {
+    "PBI_Net": "a76c92d0c162d4850bdd9c60baf71d62415820a49deb5494223c5fc45734f102",
+    "CFPT": "40c5b1d64a2b0f1d520ef0136758a6903bc6b64180ad9a62b59fbae6b2805a7c",
+    "PatchTST": "29835d4fedddd3cbee26cc60d6a54c04513f5a9ca32e4a0d08de2c9e059084e5",
+    "TimesNet": "f64c4bed1fd7347090044a0163bd4209c9f9ec1c1b19ceff47842df36b64bba7",
+    "run.py": "e4cad7e4c69fd5cd4ee70bf3d578f23677d0b7000a2b3dd1cc1ecb30764822ae"
+  },
+  "checkpoint_mode": "required",
+  "checkpoints": {
+    "PBI_Net": "/home/ai/Time-Series-Library/checkpoints/long_term_forecast_Djougou_PBI_Final_96_24_seed1001_PBI_Net_Gravity_ftS_sl96_ll48_pl24_dm128_nh8_el2_dl1_df2048_expand2_dc4_fc1_ebtimeF_dtTrue_Djougou-PBI-Final-seed1001_0/checkpoint.pth",
+    "CFPT": "/home/ai/Time-Series-Library/checkpoints/long_term_forecast_Djougou_CFPT_96_24_seed1001_CFPT_Gravity_ftS_sl96_ll48_pl24_dm128_nh8_el2_dl1_df2048_expand2_dc4_fc1_ebtimeF_dtTrue_Djougou-CFPT-seed1001_0/checkpoint.pth",
+    "PatchTST": "/home/ai/Time-Series-Library/checkpoints/long_term_forecast_Djougou_PatchTST_96_24_seed1001_PatchTST_Gravity_ftS_sl96_ll48_pl24_dm128_nh8_el2_dl1_df256_expand2_dc4_fc3_ebtimeF_dtTrue_Djougou-PatchTST-seed1001_0/checkpoint.pth",
+    "TimesNet": "/home/ai/Time-Series-Library/checkpoints/long_term_forecast_Djougou_TimesNet_96_24_seed1001_TimesNet_Gravity_ftS_sl96_ll48_pl24_dm128_nh8_el2_dl1_df256_expand2_dc4_fc1_ebtimeF_dtTrue_Djougou-TimesNet-seed1001_0/checkpoint.pth"
+  },
+  "checkpoint_sha256": {
+    "PBI_Net": "b2d604df50a4943434d2da4295998f56b374f317e3713c453558259664b8a648",
+    "CFPT": "0f3e555ba4beba1c66534e6e8f2c17a7cb9240a83f5d5c26de2da9b56dfd87f9",
+    "PatchTST": "c3e081ea5ff687e816dc1437bd2a729fad433e90c3ffb954da34698f1a6306ca",
+    "TimesNet": "06208f4bbfbe979cc7b42cddcf313eff8332f90834d88637d715dd3efb4137d4"
+  },
+  "batch_protocol": "one fixed Djougou window repeated within every batch",
+  "flops_note": "PyTorch profiler counts supported multiply-add/linear/convolution operators (one multiply-add = two FLOPs). FFT cost is added separately using 2.5*N*log2(N) real operations per real FFT. The one CFPT PTM Conv2d rejected by torch.profiler because of padding='same' is added analytically from its observed tensor geometry. Remaining elementwise and unsupported operators are not included, so approx_total_flops is an implementation-consistent approximation/lower bound, not an exact hardware instruction count."
+}

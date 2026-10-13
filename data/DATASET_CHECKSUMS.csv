@@ -1,0 +1,4 @@
+dataset,relative_filename,data_rows,total_lines,bytes,sha256,included_in_supplement
+Djougou,dataset/djougou/djougou_gravity_longest.csv,1802,1803,66077,5e0576345eacf9a0d5575de26aa5894b04662136209ab62395852b961f4ddc7e,yes
+Medicina,dataset/medicina/medicina_gravity_longest.csv,20114,20115,750513,e912f0976ed00b8454d76ad239eea388c5defaf0cdd94d70b3b21c0fae305d93,yes
+Membach,dataset/membach/membach_gravity_longest.csv,29178,29179,988894,94ebdc33ea96acc3dfff4b95166a0b2fb1afd2c4a7a241ed3d87dc930bb87b9e,no
