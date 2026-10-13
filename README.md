@@ -83,8 +83,8 @@ max 100 epochs, patience 10, best validation checkpoint. Add --device cpu or
 --gpu 0 as needed. Use --dry-run to print commands without installing torch
 or starting training. Completed manifest entries are skipped; --force reruns.
 
-Outputs: checkpoints/, results/<run>/pred.npy, true.npy, metrics.npy;
-logs/<station>/<model>/<variant>/; reproduced_results/manifest.csv.
+Outputs: `checkpoints/`, `results/<run>/pred.npy`, `true.npy`, `metrics.npy`;
+`logs/<station>/<model>/<variant>/`; `reproduced_results/manifest.csv`.
 Metrics array order: MAE,MSE,RMSE,MAPE,MSPE. We identify each run by station,
 model, variant and seed. See
 [experiment protocol](docs/FROZEN_EXPERIMENT_PROTOCOL.md).
@@ -129,8 +129,7 @@ python tools/summarize_results.py --manifest reproduced_results/manifest.csv --o
 ```
 
 Means and sample SD (ddof=1) are computed from per-run saved prediction arrays.
-Single deterministic evaluations receive no seed SD. To regenerate the main
-main-comparison summary from our per-seed experiment records:
+Single deterministic evaluations receive no seed SD. To regenerate the main-comparison summary from our per-seed experiment records:
 
 ```bash
 python tools/summarize_results.py --records paper_results/results_summary.csv --output reproduced_results/reference_main_summary.csv
